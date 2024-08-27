@@ -3,7 +3,7 @@ spring:
     name: doctor-service
   data:
     mongodb:
-      uri: mongodb+srv://ashishspanicker:6gJWuGgzQ7s8hR4c@cluster0.pb6vbbj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      uri: mongodb://localhost:27017
       database: doctor_service
 #      username: ashishspanicker
 #      password: 6gJWuGgzQ7s8hR4c
@@ -11,19 +11,19 @@ server:
   port: 8200
 logging:
   level:
-#    root: WARN
+    #    root: WARN
     org:
       mongodb:
         driver: DEBUG
       springframework:
-#        web: WARN
+        #        web: WARN
         data:
-            core:
-              MongoTemplate: DEBUG
-              MongoOperations: DEBUG
+          core:
+            MongoTemplate: DEBUG
+            MongoOperations: DEBUG
   pattern:
     console: "%msg%n"
 eureka:
   client:
     service-url:
-        defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/

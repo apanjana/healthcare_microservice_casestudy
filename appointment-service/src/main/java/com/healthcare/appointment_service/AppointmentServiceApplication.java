@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients // Enable Feign client
-@EnableDiscoveryClient // Enable service discovery
+@EnableDiscoveryClient
 public class AppointmentServiceApplication {
 
 	public static void main(String[] args) {
